@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Program</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmF/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #78938A, #EEE8E0);
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            margin-left: 76px;
+        }
+        .menu a {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .custom-button {
+            font-weight: 700;
+            font-size: 30px;
+            color: #FFFFFF;
+            background-color: #525E75;
+            border: none;
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .image-container {
+            background-color: #525E75;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .image-box {
+            background-color: #525E75;
+            height: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .image-box img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .search-input {
+            border-radius: 22px;
+            padding: 10px;
+            margin-bottom: 50px;
+            background: linear-gradient(to right, #FFFFFF, #999999);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .whats-going-on {
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .whats-going-on h2, .whats-going-on p {
+            font-size: 32px;
+            font-weight: bold;
+            color: #27563A;
+            margin: 0;
+            padding: 0;
+        }
+        .map-container {
+            width: 100%;
+            height: 480px;
+            margin-top: 10px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .disaster-info {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #4E5A70;
+        }
+
+        .disaster-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .disaster-item {
+            position: relative;
+            width: 401px;
+            height: 251px;
+        }
+
+        .disaster-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .disaster-item .text-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #EEE8E0;
+            color: #4E5A70;
+            padding: 25px;
+            font-weight: bold;
+            font-size: 110%;
+            border-radius: 15px;
+            /* word-wrap: break-word; */
+        }
+        .disaster-item .caption {
+        /* display: inline-block; */
+        align-items: center;
+        padding: 10px 20px; 
+        /* background-color: #EEE8E0; */
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #4E5A70;
+        text-align: center; 
+        max-width: 100%;
+        /* word-wrap: break-word; */
+        }
+        .info-box {
+        margin-top: 100px;
+        border-radius: 15px;
+        overflow: hidden;
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+        }
+        .info-image {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+        }
+        .info-caption {
+        padding: 15px;
+        text-align: center;
+        }
+        .info-caption h3 {
+        margin-top: 0;
+        font-size: 40px;
+        color: #4E5A70;
+        font-weight: bold;
+        font-size: 40;
+        }
+
+        .info-caption p {
+        font-size: 20px;
+        color: #4E5A70;
+        font-weight: bold;
+        margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column min-vh-100">
+        <div class="row align-items-center py-3 px-4">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="logo">
+                    <img src="image/logo.png" alt="Segav Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-8 col-lg-10 d-flex justify-content-end align-items-center flex-wrap">
+                <nav class="menu d-flex flex-wrap w-100 justify-content-end">
+                    <a href="weather.html">WeatherPedia</a>
+                    <a href="news.html">News</a>
+                    <a href="#">Emergency Contact</a>
+                    <a href="support.html">Support Program</a>
+                    <a href="about.html">About Us</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-12 d-flex justify-content-end">
+                    <input type="text" class="form-control w-25 search-input" placeholder="Search">
+                </div>
+            </div>
+            <div class="button-container">
+                <div class="col-md-6 mb-3">
+                    <button class="btn custom-button d-inline-flex justify-content-center text-center flex-grow-1">Mitigasi Bencana</button>
+                </div>
+            </div>
+            <div class="row image-container">
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 1.png" alt="Image 1">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 2.png" alt="Image 2">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 3.png" alt="Image 3">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 4.png" alt="Image 4">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 5.png" alt="Image 5">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="image-box">
+                        <img src="image/Support 6.png" alt="Image 6">
+                    </div>
+                </div>
+            </div>
+            <div class="whats-going-on">
+                <h2>What's</h2>
+                <p>Going On?</p>
+            </div>
+            <div class="map-container">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126438.33876458072!2d112.54937961217438!3d-7.978467192632858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62822063dc2fb%3A0x78879446481a4da2!2sMalang%2C%20Malang%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1718550304907!5m2!1sen!2sid" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>   
+            </div>
+            <div class="disaster-info">Informasi Bencana</div>
+            <div class="disaster-gallery">
+                <div class="disaster-item">
+                    <img src="image/Support 3.png" alt="Banjir">
+                    <div class="text-bg">Kebakaran Gudang Pengeringan Maggot di Malang, 4 Karyawan Terluka Bakar</div>
+                    <div class="caption">Banjir</div>
+                </div>
+                <div class="disaster-item">
+                    <img src="image/Support 1.png" alt="Kebakaran Gudang">
+                    <div class="text-bg">Kebakaran Gudang Pengeringan Maggot di Malang, 4 Karyawan Terluka Bakar</div>
+                    <div class="caption">Kebakaran Gudang</div>
+                </div>
+                <div class="disaster-item">
+                    <img src="image/Image (2).png" alt="Kebakaran Hutan">
+                    <div class="text-bg">Petir Besar menyebabkan terjadinya Kebakaran Hutan di Malang</div>
+                    <div class="caption">Kebakaran Hutan</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row text-center my-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="info-box">
+                            <img src="image/open volunteer.png" alt="Open Volunteer" class="info-image img-fluid">
+                            <div class="info-caption">
+                                <h3>Open Volunteer</h3>
+                                <p>Bencana alam dapat terjadi kapan saja dan di mana saja. Dengan menjadi relawan bencana alam, Anda dapat membantu orang lain yang terkena dampak dan membuat perbedaan di dunia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="info-box">
+                            <img src="image/donation.png" alt="Galang Dana" class="info-image img-fluid">
+                            <div class="info-caption">
+                                <h3>Pengalangan Dana</h3>
+                                <p>Melalui galang dana ini, kami mengajak Anda untuk berdonasi demi membantu para korban bencana. Bantuan Anda sekecil apapun akan sangat berarti bagi mereka untuk kembali bangkit dan menjalani kehidupan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="info-box">
+                            <img src="image/bantuan barang.png" alt="Bantuan Barang" class="info-image img-fluid">
+                            <div class="info-caption">
+                                <h3>Bantuan Barang</h3>
+                                <p>Rumah-rumah hancur, harta benda melayang, dan tak jarang korban jiwa. Di tengah situasi yang penuh keprihatinan ini, marilah kita bersatu padu membantu meringankan beban mereka dengan berdonasi barang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap & JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+               
