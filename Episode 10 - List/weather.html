@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherPedia - SEGAV</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmF/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #78938A;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            margin-left: 76px;
+        }
+        .menu a {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 15px;
+        }
+        .search-container {
+            margin-top: 10px;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #000;
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 20px;
+            margin-left: 72px;
+        }
+        .button-group button {
+            width: auto;
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            background-color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .button-group button:hover {
+            background-color: #3a6f50;
+        }
+        .content {
+            text-align: center;
+            color: #FFFFFF;
+            /* padding: 15px; */
+        }
+        .article {
+        border-radius: 8px;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-left: 80px;
+        margin-right: 80px;
+        }
+        .article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        }
+        .article-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        color: #525E75;
+        margin-top: 8px;
+        }
+        .article-content {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        }
+        .article-content a {
+        color: #FFFFFF;
+        text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column min-vh-100">
+        <div class="row align-items-center py-3 px-4">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="logo">
+                    <img src="image/logo.png" alt="Segav Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-8 col-lg-10 d-flex justify-content-end align-items-center flex-wrap">
+                <nav class="menu d-flex flex-wrap w-100 justify-content-end">
+                    <a href="weather.html">WeatherPedia</a>
+                    <a href="news.html">News</a>
+                    <a href="#">Emergency Contact</a>
+                    <a href="support.html">Support Program</a>
+                    <a href="about.html">About Us</a>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end px-4">
+                <div class="search-container w-100" style="max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </div>
+        </div>
+        <div class="row flex-grow-1">
+            <div class="col-12 d-flex flex-column align-items-center align-items-md-start p-4">
+                <div class="button-group">
+                    <button id="about-disaster">About Disaster</button>
+                    <button id="about-weather">About the Weather</button>
+                    <button>Disaster Mitigation</button>
+                    <button>Language</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Artikel 1 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-1">
+                <div class="article">
+                    <img src="image/image 1.png" alt="Article Image">
+                    <div class="article-title">Earthquake</div>
+                    <div class="article-content">
+                        An <a href="#">earthquake</a> – also called a quake, tremor, or temblor – is the shaking of the <a href="#">Earth's</a> surface resulting from a sudden release of energy in the <a href="#">lithosphere</a> that creates <a href="#">seismic waves</a>.
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 2 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-2">
+                <div class="article">
+                    <img src="image/Image (1).png" alt="Article Image">
+                    <div class="article-title">What can make rain forecast go wrong?</div>
+                    <div class="article-content">
+                        A familiar situation: local weather forecasts show a sunny day – but suddenly a lot of rain falls in just a few minutes. Or the other way around; forecasts show rain, but none falls. What makes this happen?
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 3 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-3">
+                <div class="article">
+                    <img src="image/Image (2).png" alt="Article Image">
+                    <div class="article-title">How lightning can occur?</div>
+                    <div class="article-content">
+                        Thunder, lightning or lightning is a natural phenomenon that usually appears during the rainy season when the sky produces a momentary, blinding flash of light. A few moments later a booming sound followed.
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 4 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-4">
+                <div class="article">
+                    <img src="image/Image (3).png" alt="Article Image">
+                    <div class="article-title">Acidic compounds, causing dizziness when it rains</div>
+                    <div class="article-content">
+                        Rainwater will make the body temperature cooler, especially in the head area, this condition makes the body try to expend more energy to reduce this cold feeling.
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 5 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-5">
+                <div class="article">
+                    <img src="image/Image (4).png" alt="Article Image">
+                    <div class="article-title">Wind - Why does air move?</div>
+                    <div class="article-content">
+                        Winds get their energy from air pressure differences, which are caused when solar heating is distributed unevenly on Earth.
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 6 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-6">
+                <div class="article">
+                    <img src="image/Image (1).png" alt="Article Image">
+                    <div class="article-title">What can make rain forecast go wrong?</div>
+                    <div class="article-content">
+                        A familiar situation: local weather forecasts show a sunny day – but suddenly a lot of rain falls in just a few minutes. Or the other way around; forecasts show rain, but none falls. What makes this happen?
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 7 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-7">
+                <div class="article">
+                    <img src="image/Image (2).png" alt="Article Image">
+                    <div class="article-title">How lightning can occur?</div>
+                    <div class="article-content">
+                        Thunder, lightning or lightning is a natural phenomenon that usually appears during the rainy season when the sky produces a momentary, blinding                         flash of light. A few moments later a booming sound followed.
+                    </div>
+                </div>
+            </div>
+            <!-- Artikel 8 -->
+            <div class="col-12 col-md-6 col-lg-3" id="article-8">
+                <div class="article">
+                    <img src="image/Image (3).png" alt="Article Image">
+                    <div class="article-title">Acidic compounds, causing dizziness when it rains</div>
+                    <div class="article-content">
+                        Rainwater will make the body temperature cooler, especially in the head area, this condition makes the body try to expend more energy to reduce this cold feeling.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap & JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // JavaScript 
+        document.getElementById('about-weather').addEventListener('click', function() {
+            document.getElementById('article-1').style.display = 'none';
+            document.getElementById('article-5').style.display = 'block';
+            document.getElementById('article-2').style.display = 'block';
+            document.getElementById('article-3').style.display = 'block';
+            document.getElementById('article-4').style.display = 'block';
+            document.getElementById('article-6').style.display = 'block';
+            document.getElementById('article-7').style.display = 'block';
+            document.getElementById('article-8').style.display = 'block';
+        });
+
+        document.getElementById('about-disaster').addEventListener('click', function() {
+            document.getElementById('article-1').style.display = 'block';
+            document.getElementById('article-5').style.display = 'none';
+            document.getElementById('article-2').style.display = 'block';
+            document.getElementById('article-3').style.display = 'block';
+            document.getElementById('article-4').style.display = 'block';
+            document.getElementById('article-6').style.display = 'block';
+            document.getElementById('article-7').style.display = 'block';
+            document.getElementById('article-8').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
+
